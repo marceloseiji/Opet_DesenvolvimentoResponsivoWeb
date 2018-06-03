@@ -1,0 +1,20 @@
+body {
+    background-color: #252525;
+}
+h1, h2 {
+    color: aliceblue;
+}
+#titulo {
+    position: relative;
+    top: 150px;
+}
+#blocoPersonagem {
+    position: relative;
+    top: 150px;
+    background-color: rgb(60, 94, 94);
+    height: 350px;
+}
+#btnPer {
+    position: relative;
+    top: 160px;
+}
