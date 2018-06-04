@@ -60,10 +60,14 @@
 
 <script>
     
-$("#btnPer").on("click", getNumberChar);
+    verTable = 0;
 
-    var verTable = 0;
-    var count = 0;
+    document.addEventListener('keydown', function(event) {
+        enter = event.key;
+            if (enter == "Enter") {
+                trocarTela();
+            }
+    });
 
     function getNumberChar(min, max) {
 
@@ -74,8 +78,7 @@ $("#btnPer").on("click", getNumberChar);
         charId = 'https://swapi.co/api/people/' + num;
 
         encontrarChar(charId);
-
-    }
+    };
 
     function encontrarChar() {
 
@@ -85,25 +88,22 @@ $("#btnPer").on("click", getNumberChar);
             if (request.readyState == 4 && request.status == 200) {
                 request = JSON.parse(request.response);
                 colocarLista();              
-            }          
+            }  ;        
         };
         
         request.open("GET", charId, true);
         request.send();
-        
     };
 
     function colocarLista(){
-        
+
         charName = request.name;
         charHeight = request.height;
         charMass = request.mass;
         charHair = request.hair_color;
         charGender = request.gender;
         btnGoogle = '<button onclick="googleChar' + "(" + "'" + charName + "'" + ")" + '"' + 'class="btn btn-success">google It!</button>';
-        count += 1;
-        
-        idHTML = "corpoTabela" + count;
+
         trh = '<th scope="col">User</th> <th scope="col">Name</th> <th scope="col">Height</th> <th scope="col">Mass</th> <th scope="col">Hair</th> <th scope="col">Gender</th> <th scope="col">Google</th>' ;
         tbo = "<tbody id='corpoTabela'>";
         tr = '<tr>';
@@ -113,19 +113,21 @@ $("#btnPer").on("click", getNumberChar);
             $("#tabelaChar").append(trh);
             $("#tabelaChar").append(tbo);
             verTable = 1;
-        } else {}
+        } else {};
 
         document.getElementById('corpoTabela').innerHTML +=td + userName + td + charName + td + charHeight + td + charMass + td + charHair + td + charGender + td + btnGoogle;
-
         limparNome();
     };
 
     function limparNome() {
+
         $("#inpUser").val("");
         $("#inpUser").css('border', '2px solid #007bff');
-    }
+
+    };
 
     function trocarTela() {
+
         userName = $("#inpUser").val() + " é: ";
 
         if (userName == " é: ") {
@@ -136,15 +138,20 @@ $("#btnPer").on("click", getNumberChar);
         document.body.style.backgroundImage = 'url(' + 'swapi.gif' + ')';
         setTimeout(getNumberChar, 1500);
         setTimeout(voltarTela, 2000);
-    }
+
+    };
 
     function voltarTela() {
+
         document.body.style.backgroundImage = 'url(' + 'swapi.jpg' + ')';
-    }
+
+    };
 
     function googleChar(x) {
+
         charFind = x;
         window.open('http://google.com/images?q='+charFind);
+
     };
 </script>
 
