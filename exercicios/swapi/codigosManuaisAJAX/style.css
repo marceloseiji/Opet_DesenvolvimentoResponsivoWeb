@@ -1,33 +1,52 @@
 body {
     background-image: url(swapi.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 180%;
+    background-size: 100% 140%;
 }
+
 h1, h2, h3, h4, h5 {
     color: aliceblue;
-    position: relative;
-    top: 150px;
 }
+
 #titulo {
     color: gold;
     position: relative;
-    top: 150px;
     font-size: 50px;
     font-weight: 800;
 }
 #blocoPersonagem {
-    position: relative;
-    top: 150px;
-    background-color: rgb(19, 19, 19);
-    height: 400px;
+    background-color: rgb(19, 19, 19, 0.5);
+    height: 475px;
     padding-top: 15px;
     border: 3px dotted gold;
     border-radius: 10px;
+    margin: auto;
 }
-.under {
-    top: 160px;
-    position: relative;
-}
+
 .form-control {
-    border: 2px solid #007bff;
+    border: 2px solid gold;;
 }
+
+#containerPrincipal {
+    position: relative;
+    top: 100px;
+}
+
+#charText {
+    margin-top: 15px;
+}
+
+.btn-outline-primary {
+    color: gold;
+    border-color: gold;
+    background-color: transparent;
+    background-image: none;
+}
+
+.btn-outline-primary {
+    background-color: rgb(255, 217, 0, .1);
+}
+#swLogo {
+    width: 350px;
+}
+
