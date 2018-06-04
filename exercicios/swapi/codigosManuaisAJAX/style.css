@@ -21,6 +21,8 @@ h1, h2, h3, h4, h5 {
     background-color: rgb(19, 19, 19);
     height: 400px;
     padding-top: 15px;
+    border: 3px dotted gold;
+    border-radius: 10px;
 }
 .under {
     top: 160px;
