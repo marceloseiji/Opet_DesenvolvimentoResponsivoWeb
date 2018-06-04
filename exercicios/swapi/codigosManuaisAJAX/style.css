@@ -1,20 +1,31 @@
 body {
-    background-color: #252525;
+    background-image: url(swapi.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 180%;
 }
-h1, h2 {
+h1, h2, h3, h4, h5 {
     color: aliceblue;
-}
-#titulo {
     position: relative;
     top: 150px;
+}
+#titulo {
+    color: gold;
+    position: relative;
+    top: 150px;
+    font-size: 50px;
+    font-weight: 800;
 }
 #blocoPersonagem {
     position: relative;
     top: 150px;
-    background-color: rgb(60, 94, 94);
-    height: 350px;
+    background-color: rgb(19, 19, 19);
+    height: 400px;
+    padding-top: 15px;
 }
-#btnPer {
-    position: relative;
+.under {
     top: 160px;
+    position: relative;
+}
+.form-control {
+    border: 2px solid #007bff;
 }
